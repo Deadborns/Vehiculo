@@ -11,6 +11,8 @@
 public class Llanta {
     private String marca;
     private double diametro;
+    
+    
 
     public void setMarca(String marca) {
         this.marca = marca;

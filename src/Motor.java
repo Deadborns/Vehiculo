@@ -11,7 +11,13 @@
 public class Motor {
     private double pot;
     private String marca;
-    private Eje eje;
+    private Eje[] ejes;
+
+    public Motor(double pot, String marca) {
+        this.pot = pot;
+        this.marca = marca;
+    }
+    
     public double getPot() {
         return pot;
     }
@@ -20,9 +26,20 @@ public class Motor {
         return marca;
     }
 
-    public Eje getEje() {
-        return eje;
-    
+    public Eje[] getEjes() {
+        return ejes;
+    }
+
+    public void setPot(double pot) {
+        this.pot = pot;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public void setEjes(Eje[] ejes) {
+        this.ejes = ejes;
     }
 
 

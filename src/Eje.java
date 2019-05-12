@@ -13,6 +13,11 @@ public class Eje {
     private Llanta[] eje;
     private Motor motor;
 
+    public Eje(String marca, Motor motor) {
+        this.marca = marca;
+        this.motor = motor;
+    }
+
     public String getMarca() {
         return marca;
     }
@@ -20,10 +25,20 @@ public class Eje {
     public void setMarca(String marca) {
         this.marca = marca;
     }
+
+    public Llanta[] getEje() {
+        return eje;
+    }
+
+    public void setEje(Llanta[] eje) {
+        this.eje = eje;
+    }
+
+    public void setMotor(Motor motor) {
+        this.motor = motor;
+    }
     
-    public void eje(){
-            this.eje = new Llanta[2];
-            }
+
     
     
 }
