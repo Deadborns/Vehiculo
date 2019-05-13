@@ -1,3 +1,6 @@
+
+import java.util.logging.Logger;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,24 +12,24 @@
  * @author edromerom
  */
 public class Carro {
-    private double peso;
+    private String placa;
     private String marca;
-    private Eje[] eje1;
-    private Eje[] eje2;
+    private Eje[] ejes;
     private Motor motor;
+    private Llanta[] llantas;
 
-    public Carro(double potencia, double peso, String MarcaC, String MarcaM) {
-        this.peso = peso;
+    public Carro(double potencia, String placa, String MarcaC, String MarcaM) {
+        this.placa = placa;
         this.marca = MarcaC;
         this.motor = new Motor(potencia, MarcaM);
     }
 
-    public double getPeso() {
-        return peso;
+    public String getPlaca() {
+        return placa;
     }
 
-    public void setPeso(double peso) {
-        this.peso = peso;
+    public void setPlaca(double peso) {
+        this.placa = placa;
     }
 
     public String getMarca() {
@@ -37,35 +40,29 @@ public class Carro {
         this.marca = marca;
     }
 
-    public Eje[] getEje1() {
-        return eje1;
+    public Eje[] getEjes() {
+        return ejes;
     }
 
-    public void setEje1(Eje[] eje1) {
-        this.eje1 = eje1;
-	   for (int i = 0; i < eje1.length; i++) {
-		   this.eje1[i].setMotor(this.motor);
+    public void setEjes(Eje[] ejes) {
+        this.ejes = ejes;
     }
 
-    public Eje[] getEje2() {
-        return eje2;
+    public Llanta[] getLlantas() {
+        return llantas;
     }
 
-    public void setEje2(Eje[] eje2) {
-        this.eje1 = eje1;
-	   for (int i = 0; i < eje2.length; i++) {
-		   this.eje2[i].setMotor(this.motor);
+    public void setLlantas(Llanta[] llantas) {
+        this.llantas = llantas;
     }
 
     public Motor getMotor() {
         return motor;
     }
 
-
     public void setMotor(Motor motor) {
         this.motor = motor;
     }
 
-    
-    
 }
+
